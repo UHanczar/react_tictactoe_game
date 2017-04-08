@@ -6,7 +6,7 @@ const Board = React.createClass({
 
   getInitialState() {
     return {
-      squares: Array(9).fill('d')
+      squares: Array(9).fill('')
     };
   },
 
@@ -20,7 +20,7 @@ const Board = React.createClass({
   },
 
   renderSquare(i) {
-    return <Square value={this.state.squares[i]} onUpdate={() => this.handleClick(i)} />;
+    return <Square value={this.state.squares[i]} onUpdate={this.handleClick} />;
   },
 
   render() {
