@@ -2,15 +2,14 @@ import React from 'react';
 
 const Square = React.createClass({
 
-  onButtonClick() {
-    const num = this.refs.count.textContent;
-    this.props.newButtonClick(num);
+  handleButtonClick() {
+    this.props.onUpdate();
   },
 
   render() {
-    const counter = this.props.counter;
+    const value = this.props.value;
     return (
-      <button className='square' ref='count' onClick={this.onButtonClick}>{counter}</button>
+      <button className='square' onClick={this.handleButtonClick}>{value}</button>
     );
   }
 });

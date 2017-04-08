@@ -5,15 +5,27 @@ body {
 .game {
   width: 600px;
   height: 600px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   .boardRow {
     width: 600px;
     height: 200px;
+    display: flex;
+    flex-direction: row;
+
   }
 
   .square {
     width: 200px;
     height: 200px;
     font-size: 36px;
+    /*display: flex;
+    jastify-content: center;
+    align-items: center;*/
+
   }
 }

@@ -4,21 +4,33 @@ import Square from './Square';
 
 const Board = React.createClass({
 
-  handleButtonClick(a) {
-    console.log('Click! ', a);
+  getInitialState() {
+    return {
+      squares: Array(9).fill('d')
+    };
+  },
+
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = 'X';
+    console.log(squares, i, squares[i]);
+    this.setState({
+      squares: squares
+    });
   },
 
   renderSquare(i) {
-    return <Square counter={i} newButtonClick={this.handleButtonClick} />;
+    return <Square value={this.state.squares[i]} onUpdate={() => this.handleClick(i)} />;
   },
 
   render() {
     const status = 'Next player: X';
+    const r = 0;
     return (
       <div>
         <div className='status'>{status}</div>
         <div className='boardRow'>
-          {this.renderSquare(0)}
+          <Square value={this.state.squares[r]} onUpdate={() => this.handleClick(r)} />;
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>

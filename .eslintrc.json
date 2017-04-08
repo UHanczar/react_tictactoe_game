@@ -20,7 +20,7 @@
     ],
 
     "rules": {
-      "linebreak-style": [2, "windows"],
+      "linebreak-style": [0, "windows"],
       "semi": [1, "always"],
       "no-debugger": 0,
       "no-console": 0,
