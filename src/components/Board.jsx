@@ -20,7 +20,7 @@ const Board = React.createClass({
   },
 
   renderSquare(i) {
-    return <Square value={this.state.squares[i]} onUpdate={this.handleClick} />;
+    return <Square value={this.state.squares[i]} onUpdate={() => this.handleClick(i)} />;
   },
 
   render() {
@@ -30,7 +30,7 @@ const Board = React.createClass({
       <div>
         <div className='status'>{status}</div>
         <div className='boardRow'>
-          <Square value={this.state.squares[r]} onUpdate={() => this.handleClick(r)} />;
+          <Square value={this.state.squares[r]} onUpdate={this.handleClick.bind(this, r)} />;
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
