@@ -32,7 +32,7 @@ const Board = React.createClass({
   render() {
     const winner = calculateWinner(this.state.squares);
     let status;
-    winner ? status = `Winner: ${winner}` : status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
+    winner ? status = `The Winner: ${winner}` : status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
 
     const r = 0;
     return (
