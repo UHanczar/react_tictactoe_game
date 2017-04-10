@@ -7,4 +7,4 @@ app.use(express.static('public'));
 
 app.get('/', (rec, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 
-app.listen(port, err => err ? console.log(err) : console.log(`Server runs under ${port} port.`));
+app.listen(process.env.PORT || 3000, err => err ? console.log(err) : console.log(`Server runs under ${port} port.`));
