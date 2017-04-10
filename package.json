@@ -7,10 +7,10 @@
   "author": "UHanczar <u.hanczar@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server": "babel-node server.js",
+    "start": "babel-node server.js",
     "webpack": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --inline --hot"
+    "server": "webpack-dev-server --inline --hot"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -39,6 +39,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
