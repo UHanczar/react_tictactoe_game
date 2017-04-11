@@ -3,7 +3,7 @@ import React from 'react';
 const Square = React.createClass({
 
   handleButtonClick() {
-    this.props.onUpdate();
+    this.props.onUpdateComponent();
   },
 
   render() {
